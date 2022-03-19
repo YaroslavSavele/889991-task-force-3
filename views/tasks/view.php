@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use Taskforce\logic\Task;
-   
+use app\controllers\AppController;   
 $this->title = 'Просмотр задания';
 
 ?>
@@ -20,7 +20,10 @@ $this->title = 'Просмотр задания';
         <?php 
             $name = $action->currentAction;
             $mapActions = $action->getmapActions();
+      //      echo AppController::debug($name);
+      //die;
         ?>
+        
         <?php if (isset($name)): ?>     
         <a href="#" class="button button--blue action-btn" data-action="<?= $name; ?>"><?= $mapActions[$name]; ?></a>
         <?php endif; ?>
@@ -128,7 +131,7 @@ $this->title = 'Просмотр задания';
    <?= Html::submitButton('Задание завершено', ['class' => 'button button--blue']) ?>
    <?php ActiveForm::end() ?>
 </div>
-<div class="regular-form pop-up pop-up--rejection pop-up--close">
+<div class="regular-form pop-up pop-up--refused pop-up--close">
    <h2>Вы действительно хотите отказаться от задания?</h2>
    <a href="<?= Url::to(['tasks/view/' . $task->id ]); ?>" class="button button--blue">Я передумал, продолжаю</a>
    <a href="<?= Url::to(['tasks/rejection', 'id' => $task->id ]); ?>" class="button button--blue">Отказаться от задания</a>

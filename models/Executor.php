@@ -45,7 +45,7 @@ class Executor extends \yii\db\ActiveRecord
             [['profile_info'], 'string'],
             [['avatar', 'specializations'], 'string', 'max' => 255],
             [['phone', 'telegram', 'current_status'], 'string', 'max' => 128],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => Users::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 

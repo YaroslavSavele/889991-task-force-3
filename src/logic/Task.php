@@ -23,9 +23,9 @@ class Task
 
     public function __construct(string $currentStatus, int $idUser, int $idCustomer, int $idExecutor = null)
     {
-        if ($currentStatus !== self::STATUS_NEW && $currentStatus !== self::STATUS_WORKING) {
-            throw new CastomException("Нет доступных действий для этого статуса");
-        }
+      //  if ($currentStatus !== self::STATUS_NEW && $currentStatus !== self::STATUS_WORKING) {
+      //      throw new CastomException("Нет доступных действий для этого статуса");
+      //  }
         $this->currentStatus = $currentStatus;
         $this->idUser = $idUser;
         $this->idCustomer = $idCustomer;

@@ -40,13 +40,13 @@ AppAsset::register($this);
                   <a class="link link--nav" href="<?= Url::to(['tasks/index']) ?>">Новое</a>
                </li>
                <li class="list-item">
-                  <a href="#" class="link link--nav">Мои задания</a>
+                  <a href="<?= Url::to(['my-tasks/index']) ?>" class="link link--nav">Мои задания</a>
                </li>
                <li class="list-item">
                   <a href="<?= Url::to(['/tasks/formalization']) ?>" class="link link--nav">Создать задание</a>
                </li>
                <li class="list-item">
-                  <a href="#" class="link link--nav">Настройки</a>
+                  <a href="<?= Url::to(['profile/index']) ?>" class="link link--nav">Настройки</a>
                </li>
             </ul>
          </div>

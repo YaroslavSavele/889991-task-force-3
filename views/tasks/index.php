@@ -27,8 +27,8 @@ $this->title = 'Задания';
             </p>
             <div class="footer-task">
                <p class="info-text town-text">
-               <?php if (isset($task->city->name)): ?>
-                   <?= Html::encode($task->city->name) ?>
+               <?php if ($task->task_location): ?>
+                   <?= Html::encode($task->task_location) ?>
                <?php else: ?>
                   Удаленная работа    
                <?php endif; ?>    

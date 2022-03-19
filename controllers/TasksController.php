@@ -155,7 +155,7 @@ class TasksController extends SecuredController
    public function actionRejection(int $id) 
    {
       $task = Task::findOne($id);
-      $task->task_status = 'done';
+      $task->task_status = 'failed';
       $task->save();
 
       $this->redirect('/tasks/view/' . $task->id);
